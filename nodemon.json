@@ -1,6 +1,6 @@
 {
   "delay": 500,
-  "exec": "ts-node -r ./src",
+  "exec": "ts-node ./src",
   "ext": "ts",
   "verbose": true,
   "watch": ["src/**/*.ts"]
