@@ -5,7 +5,7 @@ const app = express();
 /**
  * @description 상태 체크 API
  */
-app.get("/status", (req, res, next) => {
+app.get("/status", (_req, res, _next) => {
   console.log("Request status API success!!");
 
   res.send("GOOD!");
