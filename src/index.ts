@@ -2,6 +2,7 @@ import "@utils/env";
 
 import app from "@app";
 import { PROJECT } from "@utils/constants";
+import logger from "@utils/logger";
 import http from "http";
 
 const { PORT } = PROJECT;
@@ -9,5 +10,5 @@ const { PORT } = PROJECT;
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
-  console.log(`Start service on ${PORT} port!`);
+  logger.info(`Start service on ${PORT} port!`);
 });

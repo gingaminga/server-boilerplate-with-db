@@ -1,6 +1,10 @@
 declare namespace NodeJS {
   interface ProcessEnv {
+    LOG_MAX_COUNT: number;
+    LOG_MAX_SIZE: string;
+    LOG_PATH: string;
     NODE_ENV: "development" | "production" | "test";
     PORT: number;
+    PROJECT_NAME: string;
   }
 }
