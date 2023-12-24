@@ -28,3 +28,17 @@ export const HTTP_STATUS_CODE = {
   INVALID_VALUE: 422,
   INTERNAL_SERVER_ERROR: 500,
 };
+
+export const SSL = {
+  CERT: {
+    CA_PATH_AND_FILE: process.env.SSL_CA_PATH_AND_FILE || "",
+    CERT_PATH_AND_FILE: process.env.SSL_CERT_PATH_AND_FILE || "",
+    KEY_PATH_AND_FILE: process.env.SSL_KEY_PATH_AND_FILE || "",
+  },
+  PFX: {
+    PFX_PATH_AND_FILE: process.env.SSL_PFX_PATH_AND_FILE || "",
+    PASSWORD: process.env.SSL_PFX_PASSWORD || "",
+  },
+  TYPE: process.env.SSL_TYPE || "",
+  USED: process.env.HTTPS === "true",
+};
