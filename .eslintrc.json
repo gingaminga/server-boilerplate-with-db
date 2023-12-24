@@ -23,7 +23,8 @@
         "ts": "never"
       }
     ],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-explicit-any": "warn"
   },
   "settings": {
     "import/resolver": {
