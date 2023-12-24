@@ -1,7 +1,11 @@
-import http from "http";
-import app from "@/app";
+import "@utils/env";
 
-const PORT = 3000;
+import app from "@app";
+import { PROJECT_SETTING } from "@utils/constants";
+import http from "http";
+
+const { PORT } = PROJECT_SETTING;
+
 const server = http.createServer(app);
 
 server.listen(PORT, () => {
