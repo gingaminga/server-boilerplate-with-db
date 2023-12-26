@@ -1,3 +1,4 @@
+import notFoundMiddleware from "@middlewares/not-found.middleware";
 import requestLoggingMiddleware from "@middlewares/request-logging.middleware";
 import responseFormatMiddleware from "@middlewares/response-format.middleware";
 import express from "express";
@@ -8,6 +9,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(requestLoggingMiddleware);
 app.use(responseFormatMiddleware);
+app.use(notFoundMiddleware);
 
 /**
  * @description 상태 체크 API
