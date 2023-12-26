@@ -1,4 +1,3 @@
-/* eslint-disable import/prefer-default-export */
 /**
  * @description 응답 포맷
  * @param status 성공 실패 여부
