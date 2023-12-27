@@ -1,4 +1,5 @@
 import "@utils/env";
+import "reflect-metadata";
 
 import app from "@app";
 import getServer from "@server";
