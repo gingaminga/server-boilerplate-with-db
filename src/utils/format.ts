@@ -6,5 +6,5 @@
  */
 export const getResponseFormat = (status: boolean, data: any) => ({
   data,
-  status: status ? "suc" : "fia",
+  status: status ? "success" : "failure",
 });
