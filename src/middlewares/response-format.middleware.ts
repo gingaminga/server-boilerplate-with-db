@@ -29,7 +29,11 @@ export default (req: Request, res: Response, next: NextFunction) => {
     const { code, message, stack } = new CError(error);
     logger.error(stack);
 
-    res.status(code).json(getResponseFormat(false, message));
+    const data = {
+      message,
+    };
+
+    res.status(code).json(getResponseFormat(false, data));
   };
 
   next();
