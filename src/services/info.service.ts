@@ -3,22 +3,32 @@ import { injectable } from "inversify";
 import os from "os";
 
 export interface IInfoService {
-  info(): InfoDTO;
+  info(memory?: boolean, name?: boolean, uptime?: boolean): InfoDTO;
 }
 
 @injectable()
 export class InfoService implements IInfoService {
   hostName = os.hostname();
 
-  type = os.type();
+  info(memory?: boolean, name?: boolean, uptime?: boolean) {
+    let freeMemory: number | undefined;
+    let totalMemory: number | undefined;
+    let hostName: string | undefined;
+    let time: number | undefined;
 
-  version = os.release();
+    if (memory) {
+      freeMemory = os.freemem();
+      totalMemory = os.totalmem();
+    }
 
-  info() {
-    const freeMemory = os.freemem();
-    const totalMemory = os.totalmem();
-    const uptime = os.uptime();
+    if (name) {
+      hostName = this.hostName;
+    }
 
-    return new InfoDTO(this.hostName, this.type, this.version, totalMemory, freeMemory, uptime);
+    if (uptime) {
+      time = os.uptime();
+    }
+
+    return new InfoDTO(hostName, totalMemory, freeMemory, time);
   }
 }

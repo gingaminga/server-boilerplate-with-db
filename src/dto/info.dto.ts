@@ -1,30 +1,17 @@
 class InfoDTO {
-  freeMemory: number;
+  freeMemory?: number;
 
-  hostName: string;
+  hostName?: string;
 
-  totalMemory: number;
+  totalMemory?: number;
 
-  type: string;
+  uptime?: number;
 
-  uptime: number;
-
-  version: string;
-
-  constructor(
-    hostName: string,
-    type: string,
-    version: string,
-    totalMemory: number,
-    freeMemory: number,
-    uptime: number,
-  ) {
+  constructor(hostName?: string, totalMemory?: number, freeMemory?: number, uptime?: number) {
     this.freeMemory = freeMemory;
     this.hostName = hostName;
     this.totalMemory = totalMemory;
-    this.type = type;
     this.uptime = uptime;
-    this.version = version;
   }
 }
 

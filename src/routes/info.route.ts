@@ -1,8 +1,9 @@
 import { checkServerInfoController } from "@controllers/info.controller";
+import { checkInfoValidator } from "@validators/info/check-info.validator";
 import { Router } from "express";
 
 const router = Router();
 
-router.get("/", checkServerInfoController);
+router.get("/", checkInfoValidator, checkServerInfoController);
 
 export default router;
