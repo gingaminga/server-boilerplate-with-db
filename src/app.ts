@@ -1,3 +1,4 @@
+import errorHandlerMiddleware from "@middlewares/error-handler.middleware";
 import notFoundMiddleware from "@middlewares/not-found.middleware";
 import requestLoggingMiddleware from "@middlewares/request-logging.middleware";
 import responseFormatMiddleware from "@middlewares/response-format.middleware";
@@ -12,5 +13,6 @@ app.use(requestLoggingMiddleware);
 app.use(responseFormatMiddleware);
 app.use("/api", router);
 app.use(notFoundMiddleware);
+app.use(errorHandlerMiddleware);
 
 export default app;
