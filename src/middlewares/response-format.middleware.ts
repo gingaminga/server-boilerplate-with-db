@@ -1,5 +1,6 @@
 import { HTTP_STATUS_CODE } from "@utils/constants";
 import CError from "@utils/error";
+import ERROR_MESSAGE from "@utils/error-message";
 import { getResponseFormat } from "@utils/format";
 import logger from "@utils/logger";
 import { NextFunction, Request, Response } from "express";
@@ -25,15 +26,43 @@ export default (req: Request, res: Response, next: NextFunction) => {
     res.status(code).json(getResponseFormat(true, data));
   };
 
-  res.error = (error) => {
-    const { code, message, stack } = new CError(error);
+  res.error = (code, errorMessage) => {
+    let responseMessage = ERROR_MESSAGE.INTERNAL_SERVER_ERROR;
+
+    switch (code) {
+      case HTTP_STATUS_CODE.INVALID_VALUE: {
+        responseMessage = ERROR_MESSAGE.INVALID_VALUE;
+        break;
+      }
+      case HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR: {
+        responseMessage = ERROR_MESSAGE.INTERNAL_SERVER_ERROR;
+        break;
+      }
+      case HTTP_STATUS_CODE.BAD_REQUEST: {
+        responseMessage = ERROR_MESSAGE.BAD_REQUEST;
+        break;
+      }
+      case HTTP_STATUS_CODE.UNAUTHORIZED: {
+        responseMessage = ERROR_MESSAGE.UNAUTHORIZED;
+        break;
+      }
+      case HTTP_STATUS_CODE.NOT_FOUND: {
+        responseMessage = ERROR_MESSAGE.NOT_FOUND;
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+
+    const { stack } = new CError(errorMessage, code);
     logger.error(stack);
 
-    const data = {
-      message,
+    const response = {
+      message: responseMessage,
     };
 
-    res.status(code).json(getResponseFormat(false, data));
+    res.status(code).json(getResponseFormat(false, response));
   };
 
   next();

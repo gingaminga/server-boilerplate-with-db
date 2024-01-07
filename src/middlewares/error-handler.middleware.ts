@@ -10,12 +10,14 @@ import { isError } from "joi";
 export default (error: unknown, _req: Request, res: Response, _: NextFunction) => {
   if (isError(error)) {
     // validation 에러 처리
-    const customError = new CError(ERROR_MESSAGE.INVALID_VALUE, HTTP_STATUS_CODE.INVALID_VALUE);
-    res.error(customError);
+    const errorMessage = `${ERROR_MESSAGE.INVALID_VALUE} ${error.message}`;
+    res.error(HTTP_STATUS_CODE.INVALID_VALUE, errorMessage);
 
     return;
   }
 
-  const customError = new CError(ERROR_MESSAGE.INTERNAL_SERVER_ERROR, HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR);
-  res.error(customError);
+  const { message } = new CError(error);
+
+  const errorMessage = `${ERROR_MESSAGE.INTERNAL_SERVER_ERROR} ${message}`;
+  res.error(HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR, errorMessage);
 };
