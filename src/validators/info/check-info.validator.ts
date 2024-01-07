@@ -12,7 +12,7 @@ const checkInfoSchema = joi.object<ICheckInfoParam>().keys({
 export const checkInfoValidator: RequestDTOHandler<CheckInfoParamDTO> = async (req, res, next) => {
   const params = await checkInfoSchema.validateAsync(req.query);
 
-  res.locals.dto = new CheckInfoParamDTO(params);
+  res.locals.requestDTO = new CheckInfoParamDTO(params);
 
   next();
 };
