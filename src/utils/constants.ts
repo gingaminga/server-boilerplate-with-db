@@ -43,3 +43,8 @@ export const SSL = {
   TYPE: process.env.SSL_TYPE || "",
   USED: process.env.HTTPS === "true",
 };
+
+export const CORS_CONFIG = {
+  credentials: true,
+  origin: "*",
+};
