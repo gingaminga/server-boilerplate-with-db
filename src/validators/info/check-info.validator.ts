@@ -1,6 +1,6 @@
-import { RequestDTOHandler } from "@@types/express.type";
-import { ICheckInfoParam } from "@@types/params/check-info.param.type";
 import CheckInfoParamDTO from "@dto/params/check-info.param.dto";
+import { RequestDTOHandler } from "@my-types/express.type";
+import { ICheckInfoParam } from "@my-types/params/check-info.param.type";
 import joi from "joi";
 
 const checkInfoSchema = joi.object<ICheckInfoParam>().keys({

@@ -1,6 +1,6 @@
-import { RequestDTOHandler } from "@@types/express.type";
 import CheckInfoParamDTO from "@dto/params/check-info.param.dto";
 import { infoService } from "@loaders/service.loader";
+import { RequestDTOHandler } from "@my-types/express.type";
 
 /**
  * @description 서버 정보를 확인하는 컨트롤러

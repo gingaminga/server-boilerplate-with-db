@@ -1,4 +1,4 @@
-import { ICheckInfoParam } from "@@types/params/check-info.param.type";
+import { ICheckInfoParam } from "@my-types/params/check-info.param.type";
 
 class CheckInfoParamDTO {
   memory?: boolean;
