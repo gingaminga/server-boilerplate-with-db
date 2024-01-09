@@ -1,5 +1,4 @@
-import "@utils/env";
-import "reflect-metadata";
+import "@config/preset.config";
 
 import app from "@app";
 import { PROJECT } from "@utils/constants";
