@@ -7,3 +7,6 @@ node_modules
 
 # log files
 logs
+
+# test files
+coverage
