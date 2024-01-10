@@ -1,7 +1,4 @@
-import errorHandlerMiddleware from "@middlewares/error-handler.middleware";
 import { InfoService } from "@services/info.service";
-import { HTTP_STATUS_CODE } from "@utils/constants";
-import ERROR_MESSAGE from "@utils/error-message";
 import os from "os";
 
 jest.mock("os");
