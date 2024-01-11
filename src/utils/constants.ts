@@ -48,3 +48,8 @@ export const CORS_CONFIG = {
   credentials: true,
   origin: "*",
 };
+
+export const RESPONSE_STATUS = {
+  FAILURE: "failure",
+  SUCCESS: "success",
+};
