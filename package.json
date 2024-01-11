@@ -8,7 +8,9 @@
     "dev": "cross-env NODE_ENV=development nodemon --config nodemon.json",
     "eslint": "eslint ./src/**/*.ts",
     "prettier": "prettier --write ./src/**/*.ts",
-    "test": "jest"
+    "test": "jest",
+    "test:clean": "jest --clearCache",
+    "test:dev": "jest --watch"
   },
   "keywords": [],
   "author": "",
