@@ -1,4 +1,4 @@
-# Server boilerplate
+# Base server boilerplate
 
 ## ❓왜 만들게 되었나?
 
