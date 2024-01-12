@@ -4,6 +4,7 @@ const ERROR_MESSAGE = {
   INVALID_VALUE: "Invalid value..",
   NOT_FOUND: "Not found..",
   UNAUTHORIZED: "unauthorized..",
+  UNKNOWN_ERROR: "Unknown error..",
 };
 
 export default ERROR_MESSAGE;

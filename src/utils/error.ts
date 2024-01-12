@@ -1,4 +1,5 @@
 import { HTTP_STATUS_CODE } from "@utils/constants";
+import ERROR_MESSAGE from "@utils/error-message";
 
 /**
  * @description 에러 객체 custom
@@ -21,7 +22,7 @@ export default class CError extends Error {
     } else if (error instanceof Error) {
       this.message = error.message;
     } else {
-      this.message = "Unknown error..";
+      this.message = ERROR_MESSAGE.UNKNOWN_ERROR;
     }
 
     if (code) {
