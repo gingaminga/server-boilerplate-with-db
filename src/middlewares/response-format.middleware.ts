@@ -2,7 +2,7 @@ import { HTTP_STATUS_CODE } from "@utils/constants";
 import CError from "@utils/error";
 import ERROR_MESSAGE from "@utils/error-message";
 import { getResponseFormat } from "@utils/format";
-import logger from "@utils/logger";
+import logger from "@config/logger.config";
 import { NextFunction, Request, Response } from "express";
 
 /**

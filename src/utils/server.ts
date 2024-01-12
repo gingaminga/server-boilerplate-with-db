@@ -1,6 +1,6 @@
 import { SSL } from "@utils/constants";
 import CError from "@utils/error";
-import logger from "@utils/logger";
+import logger from "@config/logger.config";
 import { Express } from "express";
 import fs from "fs";
 import http, { Server } from "http";
