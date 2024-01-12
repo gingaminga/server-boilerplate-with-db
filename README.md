@@ -88,3 +88,4 @@ $ vi .env
   - `validators` : 유효성 검사를 위한 폴더
   - `app.ts` : express 설정 root 파일
   - `index.ts` : 프로젝트의 root 파일
+- `.env.sample` : .env 파일 설명 및 예시
