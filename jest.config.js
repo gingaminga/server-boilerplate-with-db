@@ -96,7 +96,7 @@ const config = {
     "^@dto/(.*)$": "<rootDir>/src/dto/$1",
     "^@loaders/(.*)$": "<rootDir>/src/loaders/$1",
     "^@middlewares/(.*)$": "<rootDir>/src/middlewares/$1",
-    "^@my-types/(.*)$": "<rootDir>/src/src/types/$1",
+    "^@my-types/(.*)$": "<rootDir>/src/types/$1",
     "^@routes/(.*)$": "<rootDir>/src/routes/$1",
     "^@services/(.*)$": "<rootDir>/src/services/$1",
     "^@utils/(.*)$": "<rootDir>/src/utils/$1",
