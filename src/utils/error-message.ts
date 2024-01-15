@@ -3,7 +3,7 @@ const ERROR_MESSAGE = {
   INTERNAL_SERVER_ERROR: "Internal server error..",
   INVALID_VALUE: "Invalid value..",
   NOT_FOUND: "Not found..",
-  UNAUTHORIZED: "unauthorized..",
+  UNAUTHORIZED: "Unauthorized..",
   UNKNOWN_ERROR: "Unknown error..",
 };
 
