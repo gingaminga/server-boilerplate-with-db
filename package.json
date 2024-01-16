@@ -49,10 +49,14 @@
     "inversify": "^6.0.2",
     "joi": "^17.11.0",
     "lodash": "^4.17.21",
+    "mysql2": "^3.7.0",
     "on-finished": "^2.4.1",
     "redis": "^4.6.12",
     "reflect-metadata": "^0.2.1",
     "supertest": "^6.3.3",
+    "typeorm": "^0.3.19",
+    "typeorm-extension": "^3.3.0",
+    "typeorm-naming-strategies": "^4.1.0",
     "winston": "^3.11.0",
     "winston-daily-rotate-file": "^4.7.1"
   }

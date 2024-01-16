@@ -59,3 +59,12 @@ export const REDIS = {
   PASSWORD: process.env.REDIS_PASSWORD,
   PORT: Number(process.env.REDIS_PORT || 6379),
 };
+
+export const RELATION_DB = {
+  HOST: process.env.RELATION_DB_HOST || "127.0.0.1",
+  PASSWORD: process.env.RELATION_DB_PASSWORD,
+  PORT: Number(process.env.RELATION_DB_PORT || 3306),
+  SCHEMA: process.env.RELATION_DB_SCHEMA || "",
+  TYPE: process.env.RELATION_DB_TYPE || "mysql",
+  USER_NAME: process.env.RELATION_DB_USER_NAME || "",
+};

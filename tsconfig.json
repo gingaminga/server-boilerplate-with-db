@@ -37,6 +37,7 @@
       "@loaders/*": ["src/loaders/*"],
       "@main/*": ["src/main/*"],
       "@middlewares/*": ["src/middlewares/*"],
+      "@my-rdb/*": ["src/db/rdb/*"],
       "@my-redis/*": ["src/db/redis/*"],
       "@my-types/*": ["src/types/*"],
       "@routes/*": ["src/routes/*"],
