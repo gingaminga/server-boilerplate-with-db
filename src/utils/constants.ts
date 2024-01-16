@@ -53,3 +53,9 @@ export const RESPONSE_STATUS = {
   FAILURE: "failure",
   SUCCESS: "success",
 };
+
+export const REDIS = {
+  HOST: process.env.REDIS_HOST || "127.0.0.1",
+  PASSWORD: process.env.REDIS_PASSWORD,
+  PORT: Number(process.env.REDIS_PORT || 6379),
+};
