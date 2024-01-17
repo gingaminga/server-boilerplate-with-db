@@ -1,12 +1,12 @@
 import CheckInfoParamDTO from "@dto/params/info/check-info.param.dto";
 import { RequestDTOHandler } from "@my-types/express.type";
 import { ICheckInfoParam } from "@my-types/params/info.param.type";
-import joi from "joi";
+import Joi from "joi";
 
-export const checkInfoSchema = joi.object<ICheckInfoParam>().keys({
-  name: joi.boolean(),
-  memory: joi.boolean(),
-  uptime: joi.boolean(),
+export const checkInfoSchema = Joi.object<ICheckInfoParam>().keys({
+  name: Joi.boolean(),
+  memory: Joi.boolean(),
+  uptime: Joi.boolean(),
 });
 
 export const checkInfoValidator: RequestDTOHandler<CheckInfoParamDTO> = async (req, res, next) => {

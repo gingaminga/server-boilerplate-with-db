@@ -2,7 +2,7 @@ import errorHandlerMiddleware from "@middlewares/error-handler.middleware";
 import { HTTP_STATUS_CODE } from "@utils/constants";
 import ERROR_MESSAGE from "@utils/error-message";
 import { Request, Response } from "express";
-import joi from "joi";
+import Joi from "joi";
 
 describe(`Error handler middleware test :)`, () => {
   const req = {} as Request;
@@ -15,7 +15,7 @@ describe(`Error handler middleware test :)`, () => {
     // given
     const error = new Error("Validate error!");
     const errorMessage = `${ERROR_MESSAGE.INVALID_VALUE} ${error.message}`;
-    jest.spyOn(joi, "isError").mockReturnValue(true);
+    jest.spyOn(Joi, "isError").mockReturnValue(true);
 
     // when
     errorHandlerMiddleware(error, req, res, next);
@@ -29,7 +29,7 @@ describe(`Error handler middleware test :)`, () => {
     // given
     const error = new Error("Internal server error!");
     const errorMessage = `${ERROR_MESSAGE.INTERNAL_SERVER_ERROR} ${error.message}`;
-    jest.spyOn(joi, "isError").mockReturnValue(false);
+    jest.spyOn(Joi, "isError").mockReturnValue(false);
 
     // when
     errorHandlerMiddleware(error, req, res, next);
