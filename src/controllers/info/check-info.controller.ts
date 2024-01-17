@@ -1,4 +1,4 @@
-import CheckInfoParamDTO from "@dto/params/check-info.param.dto";
+import CheckInfoParamDTO from "@dto/params/info/check-info.param.dto";
 import { infoService } from "@loaders/service.loader";
 import { RequestDTOHandler } from "@my-types/express.type";
 
