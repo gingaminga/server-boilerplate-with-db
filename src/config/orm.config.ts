@@ -1,4 +1,4 @@
-import ToDo from "@my-rdb/entities/todo.entity";
+import ToDo from "@my-rdb/entities/to-do.entity";
 import { PROJECT, RELATION_DB } from "@utils/constants";
 import { DataSourceOptions } from "typeorm";
 import { SnakeNamingStrategy } from "typeorm-naming-strategies";
