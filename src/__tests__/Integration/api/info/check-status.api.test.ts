@@ -2,7 +2,6 @@ import app from "@app";
 import { HTTP_STATUS_CODE, RESPONSE_STATUS } from "@utils/constants";
 import ERROR_MESSAGE from "@utils/error-message";
 import request from "supertest";
-import os from "os";
 
 const path = "/api/info";
 
