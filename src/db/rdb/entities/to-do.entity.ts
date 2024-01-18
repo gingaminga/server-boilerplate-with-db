@@ -14,7 +14,7 @@ class ToDo {
 
   @Column({
     comment: "날짜",
-    length: 8,
+    length: 10,
     type: "char",
   })
   date!: string;
@@ -25,7 +25,6 @@ class ToDo {
   createdAt!: Date;
 
   @UpdateDateColumn({
-    default: null,
     type: "timestamp",
   })
   updatedAt!: Date;
