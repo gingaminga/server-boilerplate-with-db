@@ -5,6 +5,7 @@ import { injectable } from "inversify";
 export interface IToDoService {
   add(content: string, date: string): Promise<ToDo>;
   getAll(): Promise<ToDo[]>;
+  modifyContent(id: number, content: string): Promise<ToDo>;
 }
 
 @injectable()
@@ -35,5 +36,20 @@ export class ToDoService implements IToDoService {
   async getAll() {
     const data = await this.toDoRepository.find();
     return data;
+  }
+
+  /**
+   * @description 할 일 수정하기
+   * @param id
+   * @param content 내용
+   */
+  async modifyContent(id: number, content: string) {
+    await this.toDoRepository.modifyContent(id, content);
+
+    const todo = await this.toDoRepository.findOneByOrFail({
+      id,
+    });
+
+    return todo;
   }
 }
