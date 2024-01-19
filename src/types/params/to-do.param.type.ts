@@ -12,3 +12,7 @@ export interface IModifyContentPathParam {
 }
 
 export interface IModifyContentParam extends IModifyContentBodyParam, IModifyContentPathParam {}
+
+export interface IRemoveToDoParam {
+  id: number;
+}

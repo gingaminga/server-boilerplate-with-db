@@ -24,4 +24,20 @@ export const ToDoRepository = rdbClient.getRepository(ToDo).extend({
 
     return false;
   },
+  /**
+   * @description 할 일 삭제하기
+   * @param id
+   * @returns true (삭제) / false (삭제 실패)
+   */
+  async remove(id: number) {
+    const result = await this.softDelete({
+      id,
+    });
+
+    if (result.affected && result.affected > 0) {
+      return true;
+    }
+
+    return false;
+  },
 });
