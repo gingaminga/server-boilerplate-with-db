@@ -1,5 +1,5 @@
 {
-  "name": "base-server-boilerplate",
+  "name": "server-boilerplate-with-db",
   "version": "0.0.1",
   "description": "",
   "main": "index.js",
