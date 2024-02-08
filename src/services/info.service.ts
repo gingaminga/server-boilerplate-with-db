@@ -1,9 +1,9 @@
-import InfoDTO from "@dto/info.dto";
+import CheckInfoResponseDTO from "@dto/responses/info/check-info.response.dto";
 import { injectable } from "inversify";
 import os from "os";
 
 export interface IInfoService {
-  info(memory?: boolean, name?: boolean, uptime?: boolean): InfoDTO;
+  info(memory?: boolean, name?: boolean, uptime?: boolean): CheckInfoResponseDTO;
 }
 
 @injectable()
@@ -29,6 +29,6 @@ export class InfoService implements IInfoService {
       time = os.uptime();
     }
 
-    return new InfoDTO(hostName, totalMemory, freeMemory, time);
+    return new CheckInfoResponseDTO(hostName, totalMemory, freeMemory, time);
   }
 }
