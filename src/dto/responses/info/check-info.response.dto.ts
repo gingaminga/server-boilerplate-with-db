@@ -1,4 +1,4 @@
-class InfoDTO {
+class CheckInfoResponseDTO {
   freeMemory?: number;
 
   hostName?: string;
@@ -15,4 +15,4 @@ class InfoDTO {
   }
 }
 
-export default InfoDTO;
+export default CheckInfoResponseDTO;
