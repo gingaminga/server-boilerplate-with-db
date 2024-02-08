@@ -1,4 +1,4 @@
-import RemoveToDoDTO from "@dto/remove-to-do.dto";
+import RemoveToDoResponseDTO from "@dto/responses/to-do/remove-to-do.response.dto";
 import { ToDoRepository } from "@my-rdb/repositories/to-do.repository";
 import { ToDoService } from "@services/to-do.service";
 
@@ -22,7 +22,7 @@ describe(`[ToDo service] remove method test :)`, () => {
 
   it(`should be return todo array.`, async () => {
     // given
-    const dto = new RemoveToDoDTO(id);
+    const dto = new RemoveToDoResponseDTO(id);
     mockedToDoRepository.remove.mockResolvedValue(true);
 
     // when
