@@ -1,4 +1,5 @@
 import { ToDoRepository } from "@my-rdb/repositories/to-do.repository";
+import RedisClient from "@my-redis/client";
 import { InfoService } from "@services/info.service";
 import { ToDoService } from "@services/to-do.service";
 import INVERSIFY_TYPES from "@utils/invesify-type";
@@ -12,5 +13,8 @@ container.bind<ToDoService>(INVERSIFY_TYPES.ToDoService).to(ToDoService).inSingl
 
 // repository
 container.bind<typeof ToDoRepository>(INVERSIFY_TYPES.ToDoRepository).toConstantValue(ToDoRepository);
+
+// db
+container.bind<RedisClient>(INVERSIFY_TYPES.RedisClient).toConstantValue(new RedisClient());
 
 export default container;
