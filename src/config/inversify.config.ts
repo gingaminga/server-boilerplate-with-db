@@ -2,7 +2,7 @@ import { ToDoRepository } from "@my-rdb/repositories/to-do.repository";
 import RedisClient from "@my-redis/client";
 import { InfoService } from "@services/info.service";
 import { ToDoService } from "@services/to-do.service";
-import INVERSIFY_TYPES from "@utils/invesify-type";
+import INVERSIFY_TYPES from "@utils/inversify-type";
 import { Container } from "inversify";
 
 const container = new Container();

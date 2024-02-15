@@ -1,7 +1,7 @@
 import RemoveToDoResponseDTO from "@dto/responses/to-do/remove-to-do.response.dto";
 import ToDo from "@my-rdb/entities/to-do.entity";
 import { ToDoRepository } from "@my-rdb/repositories/to-do.repository";
-import INVERSIFY_TYPES from "@utils/invesify-type";
+import INVERSIFY_TYPES from "@utils/inversify-type";
 import { inject, injectable } from "inversify";
 
 export interface IToDoService {
