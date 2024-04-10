@@ -43,4 +43,15 @@ describe(`CError class test :)`, () => {
     expect(error.message).toBe(ERROR_MESSAGE.UNKNOWN_ERROR);
     expect(error.code).toBe(HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR);
   });
+
+  it("should create a CError instance from custom info.", () => {
+    const data = {
+      code: "ERROR01",
+    };
+    const error = new CError(errorMessage, HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR, data);
+
+    expect(error.message).toBe(errorMessage);
+    expect(error.code).toBe(HTTP_STATUS_CODE.INTERNAL_SERVER_ERROR);
+    expect(error.data).toBe(data);
+  });
 });
